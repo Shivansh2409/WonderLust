@@ -1,0 +1,62 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <h3>Edit the List</h3>
+    <form action="/listings/<%= listing1._id %>?_method=PUT" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-lable">Title</label>
+            <input type="text" name="title" placeholder="Title" value="<%= listing1.title %>" class="form-control" required>
+            <div class="invalid-feedback">
+                You must enter a title.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-lable">Description</label>
+            <input type="text" name="description" placeholder="Description" value="<%= listing1.description %>" class="form-control" required>
+            <div class="invalid-feedback">
+                You must enter a description.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-lable">Price</label>
+            <input type="number" name="price" placeholder="Price" value="<%= listing1.price %>" class="form-control" required>
+            <div class="invalid-feedback">
+                You must enter a price.
+            </div>
+        </div>
+        <img src="<%= lowImage %>" alt="image of preview listing" class="preview" style=" height: 200px;">
+        <div class="mb-3">
+            <label for="images" class="form-lable">Image URL</label>
+            <input type="file" name="images" placeholder="Image URL" class="form-control" >
+            
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-lable">Location</label>
+            <input type="text" name="location" placeholder="Location" value="<%= listing1.location %>" class="form-control" required>
+            <div class="invalid-feedback">
+                You must enter a location.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-lable">Country</label>
+            <input type="text" name="country" placeholder="Country" value="<%= listing1.country %>" class="form-control" required>
+            <div class="invalid-feedback">
+                You must enter a country.
+            </div>
+        </div>
+        <br><br>
+        <button class="btn btn-dark"> create</button>
+    </form>
+    </div>
+    </div>
+    <!-- <form action="/listings/<%= listing1._id %>?_method=PUT" method="post">
+        <input type="text" name="title" value="<%= listing1.title %>" placeholder="Title" >
+        <input type="text" name="description" value="<%= listing1.description %>" placeholder="Description" >
+        <input type="number" name="price" value="<%= listing1.price %>" placeholder="Price" >
+        <input type="text" name="image" value="<%= listing1.image %>" placeholder="Image URL" >
+        <input type="text" name="location" value="<%= listing1.location %>" placeholder="Location" >
+        <input type="text" name="country" value="<%= listing1.country %>" placeholder="Country" >
+        <button>Update</button>
+    </form> -->
+</body>

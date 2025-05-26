@@ -1,0 +1,140 @@
+.contaner {
+    background-color: white;
+    /* padding: 20px;
+    border-radius: 5px; */
+    padding: 2rem;
+    flex:1;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    height: 5rem;
+    position: relative !important;
+}
+
+.user{
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    border: #fe424d 0.1rem solid;
+    border-radius: 2.5rem;
+    padding: 0.1rem;
+}
+.user:hover{
+    border: white 0.1rem solid;
+}
+.sign{
+    border-radius: 2rem;
+    padding: 0.4rem;
+    
+}
+.sign:hover{
+    border-radius: 2rem;
+    padding: 0.4rem;
+    background-color: #fe424d;
+    color: white;
+}
+.user a{
+    text-decoration: none !important;
+    color: rgb(0, 0, 0);
+
+}
+#sech{
+    background-color: #fe424d;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 3rem;
+    border: #fe424d 0.1rem solid;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    border-radius: 4rem !important;
+}
+.user a:hover{
+    text-decoration: none !important;
+    color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+    margin: 0 10px;
+
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.f-info-links a{
+    color: #d6d6d6;
+    text-decoration: none ;
+    font-size: 0.8rem;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-socials{
+    font-size: 1.2rem;
+}
+.f-info-socials a{
+    text-decoration: none;
+    color: #d6d6d6;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+/* card */
+.card-style{
+    border: none !important;
+    margin-bottom: 2rem !important;
+    
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text {
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none !important;
+}
+.card-img-overlay{
+    background-color: #d6d6d6 !important;
+    opacity: 0 !important;
+
+}
+.card-img-overlay:hover{
+    opacity: 0.29 !important;
+}
+
+/* map */
+#map {  
+    top: 0; 
+    bottom: 0; 
+    width: 42rem;
+    height: 70vh;
+    border-radius: 2rem;
+    
+}
