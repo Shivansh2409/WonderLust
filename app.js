@@ -8,7 +8,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
-
+const warpAsync = require('./utils/WrapAsync.js');
+const listing = require('./models/listing.js');
 
 
 const expreeError = require('./utils/ExpressError.js');
@@ -117,10 +118,11 @@ app.listen(3000, () => {
 );
 
 // home page
-// app.get('/',(req, res) => {
-//     res.send('Home Page');
-// }
-// );
+app.get('/',warpAsync(async(req, res) => {
+    const listings = await listing.find({});
+    res.render('listing/index.ejs', { listings });
+}
+));
 
 
 app.all("/:id", (req, res,next) => {
